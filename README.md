@@ -11,7 +11,7 @@ Idea taken from TOP ([The Odin Project](https://www.theodinproject.com/lessons/n
 - I've decided to hard-code the Tic-Tac-Toe grid as opposed to using a Gameboard object. I figure since we'll be seeing the board all the time, it's more logical to build out the individual cells as we know in advance a traditional game only has a 3x3, or 9-cell setup.
 
 ## Current Issues
-A **LOT**. This is an early draft, uploaded to Github. 
+- Having a few issues where the board does not fully reset after certain events happen. Working on this.
 
 ## Future Ideas
 - Build out an AI, starting with a basic one, then staggering it out in stages (beginner, intermediate, advanced). 

@@ -15,6 +15,11 @@
                 <div class="form-group">
                     <label for="player1">Player 1:</label>
                     <input type="text" id="player1" />
+                    <select id="player1marker">
+                        <option disabled selected>Select:</option>
+                        <option value="X">X</option>
+                        <option value="O">O</option>
+                    </select>
                     <input type="checkbox" id="player1AI" class="ai-checkbox" />
                     <label for="player1AI">AI?</label>
                 </div>
@@ -22,23 +27,45 @@
                 <div class="form-group">
                     <label for="player2">Player 2: </label>
                     <input type="text" id="player2" />
+                    <select id="player2marker">
+                        <option disabled selected>Select:</option>
+                        <option value="X">X</option>
+                        <option value="O">O</option>
+                    </select>
                     <input type="checkbox" id="player2AI" class="ai-checkbox"/>
                     <label for="player2AI">AI?</label>
                 </div>
 
-                <button type="submit" id="startButton" class="start-button">Start Game</button>
+                <div class="button-group">
+                    <button type="submit" id="startButton" class="start-button">Start</button>
+                </div>
             </form>
+            <div id="displayController" class="displayController hidden">
+                <div id="players">
+                    <div id="player1display" class="playerdisplay">
+                        <div id="player1name"></div>
+                        <div id="player1symbol" class="playersymbol"></div>
+                    </div>
+                    <div id="vs">VS</div>
+                    <div id="player2display" class="playerdisplay">
+                        <div id="player2name"></div>
+                        <div id="player2symbol" class="playersymbol"></div>
+                    </div>
+                </div>
+                <button type="button" id="resetButton" class="reset-button">Reset</button>
+            </div>
         </div>
+        <div id="resultMessage" class="resultMessage"></div>
         <div id="gameboard">
             <div class="gridcell upper left" id="cell-1"></div>
             <div class="gridcell upper" id="cell-2"></div>
-            <div class="gridcell upper right" id="cell-3">T</div>
+            <div class="gridcell upper right" id="cell-3"></div>
             <div class="gridcell middle left" id="cell-4"></div>
-            <div class="gridcell middle" id="cell-5">X</div>
-            <div class="gridcell middle right" id="cell-6">O</div>
+            <div class="gridcell middle" id="cell-5"></div>
+            <div class="gridcell middle right" id="cell-6"></div>
             <div class="gridcell bottom left" id="cell-7"></div>
             <div class="gridcell bottom" id="cell-8"></div>
-            <div class="gridcell bottom right" id="cell-9">S</div>
+            <div class="gridcell bottom right" id="cell-9"></div>
         </div>
     </div>
 </body>
